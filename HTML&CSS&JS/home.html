@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+</style>
+<body class="light-grey content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="container">
+    <a href="#" onclick="w3_close()" class="hide-large right jumbo padding hover-grey" title="close menu">
+      <i class="fa fa-remove fa-fw margin-right"></i></a>
+	  <br><br>
+  </div>
+  <div class="container">
+    <img src="Images/catherine2.jpg" style="width:45%;" class="round"><br><br>
+    <h4><b>Catherine Fleming</b></h4>
+  </div>
+  <div class="bar-block"> 
+	<a href="portfolio.html" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-photo fa-fw margin-right"></i>PORTFOLIO</a> 
+	<div class="bar-block"> 
+	<a href="store.html" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-shopping-cart fa-fw margin-right"></i>SHOP</a> 
+    <a onclick="document.getElementById('id01').style.display='block'" class="bar-item button padding text-teal"><i class="fa fa-user fa-fw margin-right"></i>LOGIN</a> 
+	<a href="blog.html" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-comments-o fa-fw margin-right"></i>BLOG</a> 
+    <a href="contact.html" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
+	<a href="http://localhost/php/connectDB.php" onclick="close()" class="bar-item button padding text-teal" target="_blank"><i class="fa fa-archive fa-fw margin-right"></i>DATABASE LINK</a>
+  </div>
+  <div class="panel large">
+    <a class="fa fa-facebook-official hover-opacity" href="https://www.facebook.com/catherine.f95.art" target="_blank"></a>
+    <a class="fa fa-instagram hover-opacity" href="https://www.instagram.com/catherineflemingart/" target="_blank"></a>
+
+	
+  </div>
+  
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    
+    <span class="button hide-large xxlarge hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+	<br>
+	<br>
+    <div class="container">
+    <h1><b>Home</b></h1>
+    <div class="section bottombar padding-16">
+    </div>
+    </div>
+  </header>
+  
+  
+    <!-- Modal Login container -->
+  <div id="id01" class="modal">
+  
+  <div class="modal-content animate">
+    <div class="imgcontainer">
+	<h1 class="modal-title"></h1>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+	
+    <div class="container" style="overflow-x:auto;">
+	<table bgcolor="Thistle"  border="1" width="100%" height="50%">
+	<tr>
+			<td colspan="2">
+					<center><h1><i><b>Login Area</b></i></h1></center>
+			</td>
+	</tr>
+	
+	<tr>
+			<td>
+				<h3>
+					<i><b>Username:</b></i>
+				</h3>
+			</td>
+			<td>
+				<form name="login">
+					<input name="id" type="text">
+								</td>
+						</tr>
+						<tr>
+								<td>
+									<h3><i><b>Password:</b></i>
+									</h3>	
+								</td>
+								<td>
+									<input name="pass" type="password">
+								</td>	
+						</tr>
+
+						<tr>
+								<td>
+									<center>
+									<input type="button" value="Login" onClick="pasuser(this.form)">
+									</center>
+								</td>
+						
+								<td>
+									<center>
+									<input type="Reset">
+								</td>
+						</tr>
+		
+				</form>
+		
+	</table>
+</center>
+
+    </div>
+  </div>
+</div>
+
+
+ <!-- Bootstrap Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images-->
+  <div class="mySlides fade">
+    <img  src="Images/falling.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img  src="Images/bath.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/boat.jpg" style="width:80%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="Images/anxiety.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/abstractart.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/dubheasa.jpg" style="width:80%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="Images/eye.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/sinking.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/hands.jpg" style="width:80%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="Images/spiddal.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/touch.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/print.jpg" style="width:80%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="Images/quicksketch.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/granny.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/granny2.jpg" style="width:80%">
+  </div>
+
+</div>
+
+<br>
+<br>
+
+
+<div class="container padding-large" style="margin-bottom:32px">
+    <h4><b>Welcome</b></h4
+	
+	
+	<p>Hi there! Welcome to my Art Shop. I'm an aspiring Artist called Cathering Fleming who is based in Galway.If you like my blog, or are interested in purchasing any of my Paintings, please <strong>follow me</strong> on facebook or Instagram and tell your friends and family to check out my page. If you want to get in touch with me, please click on the contact link in the navigation bar.</p>
+	</div>
+
+
+
+  <div class="section bottombar padding-16">
+  </div>
+ <br>
+
+  <!-- About Me -->
+  <div class="row-padding padding-16" id="about">
+    <div >
+      <img src="Images/catherine1.jpg" alt="Me" style="width:50% height: 50%" class="circle vignette" >
+    </div>
+    
+  </div>
+
+  <div class="container padding-large" style="margin-bottom:32px">
+    <h4><b>About Me</b></h4
+	
+	
+	<p> From a very young age I began to develope an interest in painting, holding my first exhibition at the mere age of 11 along with my aunt Rena Fleming in aid of the Burren Chernobyl Project. Since then I have had several exhibitions around Galway. The theme behind the majority of my pieces is anxiety and portray the often overwhelming experience of panic through the bold colours and patterns surrounding the figures in my paintings. I hope that my work demonstrates visually what so many experience and struggle with throughout their daily lives whilst suffering from anxiety."</p>
+    <hr>
+	</div>
+	<div class="section bottombar padding-16">
+    </div>
+	<br>
+    <h4>Technical Skills Experience</h4>
+	<br>
+	<br>
+    <!-- Progress bars / Skills -->
+    <p>Artistry</p>
+    <div class="grey">
+      <div class="container dark-grey padding center" style="width:95%">95%</div>
+    </div>
+    <p>Photography</p>
+    <div class="grey">
+      <div class="container dark-grey padding center" style="width:85%">85%</div>
+    </div>
+    <p>Photoshop</p>
+    <div class="grey">
+      <div class="container dark-grey padding center" style="width:80%">80%</div>
+    </div>
+    <p>
+      <button class="button dark-grey padding-large margin-top margin-bottom">
+        <i class="fa fa-download margin-right"></i>Download my CV
+      </button>
+    </p>
+    <hr>
+    
+	<div class="section bottombar padding-16">
+    </div>
+	<br>
+    <h4>How much I charge</h4>
+	<br>
+	<br>
+    <!-- Pricing Tables -->
+    <div class="row-padding" style="margin:0 -16px">
+      <div class="third margin-bottom">
+        <ul class="ul border white center opacity hover-opacity-off">
+          <li class="black xlarge padding-32">Basic Sketch Session</li>
+		  <li class="padding-16">Brainstorming Session</li>
+          <li class="padding-16">Photography</li>
+          <li class="padding-16">Sketch</li>
+          <li class="padding-16">USB Digital Copy</l>
+          <li class="padding-16">
+            <h2>€ 80</h2>
+            <span class="opacity">per hour</span>
+          </li>
+          </ul>
+      </div>
+      
+      <div class="third margin-bottom">
+        <ul class="ul border white center opacity hover-opacity-off">
+          <li class="teal xlarge padding-32">Acrylic Painting Session</li>
+          <li class="padding-16">Photography</li>
+          <li class="padding-16">Sketch</li>
+          <li class="padding-16">Painting</li>
+          <li class="padding-16">USB Digital Copy</li>
+          <li class="padding-16">
+            <h2>€ 100</h2>
+            <span class="opacity">per hour</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="third">
+        <ul class="ul border white center opacity hover-opacity-off">
+          <li class="black xlarge padding-32">Oil Painting Session</li>
+          <li class="padding-16">Photography</li>
+          <li class="padding-16">Sketch</li>
+          <li class="padding-16">Painting</li>
+          <li class="padding-16">USB Digital Copy</li>
+          <li class="padding-16">
+            <h2>€ 150</h2>
+            <span class="opacity">per hour</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  <br>
+  <br>
+  <br>
+  
+  <!-- Footer -->
+<footer class="center black padding-64 opacity hover-opacity-off">
+
+ <div id="footer">
+      <div class="container">
+            <div class="column">
+              <p>Powered by Aisling Boner</p>
+				<p>Student Id: G00376422</p>
+            </div>
+      </div>
+    </div>
+
+ 
+</footer>
+
+
+</div>
+
+
+<script language="javascript">
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+//Slideshow 
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+<!--//
+/*This Script allows people to enter by using a form that asks for a
+UserID and Password - location="page2.html" */
+
+function pasuser(form) {
+
+if (form.id.value=="Aisling") { 
+if (form.pass.value=="123") {              
+alert("You Have Succesfully Logged In!")
+modal.style.display = "none";
+} else {
+alert("Invalid Password. Please Try Again!!")
+}
+} else {  alert("Invalid Username. Please Try Again!!")
+}
+}
+//-->
+</script>
+
+
+
+
+
+</body>
+</html>
